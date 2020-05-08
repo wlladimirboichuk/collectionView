@@ -8,6 +8,10 @@
 
 import UIKit
 
-class PhotoCell: UICollectionViewCell {
+class PhotoCell:
+
+UICollectionViewCell {
+   
+    @IBOutlet weak var dogImageView: UIImageView!
     
 }
