@@ -10,9 +10,24 @@ import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController {
 
+    let itemsPerRow: CGFloat = 2
+    let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // 1-й Способ конфигурации лаяутов.
+//
+//        let  layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.itemSize = CGSize(width:70 , height: 30)
+//        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+//        layout.minimumLineSpacing = 1
+//        layout.minimumInteritemSpacing = 1
+//
+//        // Снятие скрола
+//        collectionView.showsVerticalScrollIndicator = false
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -41,32 +56,32 @@ class PhotosCollectionViewController: UICollectionViewController {
     }
 
 }
+// 2-Й Способ изменений лаяутов.
 
 extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
-    
+
     //sizeFOr - Метод дающий размеры.
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemsPerRow: CGFloat = 3
         // Код для высчитывания точной велечины обьекта автоматически.
-        let paddingWidth = 20 * (itemsPerRow + 1)
+        let paddingWidth = sectionInserts.left * (itemsPerRow + 1)
         let availableWidth = collectionView.frame.width - paddingWidth
         let widthPerItem = availableWidth / itemsPerRow
-        return CGSize(width:100 , height:50 )
+        return CGSize(width:widthPerItem , height:widthPerItem )
     }
-    
+
     //inserFotS - Метод для корекции секции.Задает точные отступы для границ.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-    }
-    
+        return sectionInserts
+
     //minimumForsection - Указание отступов.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return sectionInserts.left
     }
     // Расстояние между обьектами.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
-    }
+        return sectionInserts.left
     }
 
+    }
+}
