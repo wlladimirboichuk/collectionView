@@ -16,7 +16,8 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
+    
         // 1-й Способ конфигурации лаяутов.
 //
 //        let  layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -31,7 +32,17 @@ class PhotosCollectionViewController: UICollectionViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    //Функция поделиться после закрепления ячейки.
+    
+    override func prepare(for segue: UIStoryboard, sender: Any?) {
+        if segue.identifier == "pickPhotoSegue" {
+            let photoVC = segue.destination as! PhotoViewController
+            let cell = sender as! PhotoCell
+            photoVC.image = cell.dogImageView.image 
+        }
 
+    }
     
     // MARK: UICollectionViewDataSource
 

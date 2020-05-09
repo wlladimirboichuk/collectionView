@@ -14,6 +14,7 @@
 		4AE1C2D92465C0A80042CB33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1C2D72465C0A80042CB33 /* LaunchScreen.storyboard */; };
 		4AE1C2E12465E4B80042CB33 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C2E02465E4B80042CB33 /* PhotosCollectionViewController.swift */; };
 		4AE1C2E32465FC450042CB33 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C2E22465FC450042CB33 /* PhotoCell.swift */; };
+		4AE1C2E5246616E10042CB33 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C2E4246616E10042CB33 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4AE1C2DA2465C0A80042CB33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AE1C2E02465E4B80042CB33 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		4AE1C2E22465FC450042CB33 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		4AE1C2E4246616E10042CB33 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4AE1C2CC2465C0A40042CB33 /* AppDelegate.swift */,
 				4AE1C2CE2465C0A40042CB33 /* SceneDelegate.swift */,
 				4AE1C2D22465C0A40042CB33 /* Main.storyboard */,
+				4AE1C2E4246616E10042CB33 /* PhotoViewController.swift */,
 				4AE1C2E22465FC450042CB33 /* PhotoCell.swift */,
 				4AE1C2E02465E4B80042CB33 /* PhotosCollectionViewController.swift */,
 				4AE1C2D52465C0A80042CB33 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				4AE1C2CD2465C0A40042CB33 /* AppDelegate.swift in Sources */,
 				4AE1C2CF2465C0A40042CB33 /* SceneDelegate.swift in Sources */,
 				4AE1C2E12465E4B80042CB33 /* PhotosCollectionViewController.swift in Sources */,
+				4AE1C2E5246616E10042CB33 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
